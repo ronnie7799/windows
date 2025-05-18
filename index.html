@@ -278,127 +278,110 @@
             color: #e6e6e6;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+        @media (max-width: 500px) {
+  .about-image img {
+    max-width: 90%;
+  }
+}
+
         
-        .about-image {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        /* Projects section */
-        .projects {
-            padding: 6rem 1rem;
-            position: relative;
-        }
-        
-        .projects-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .projects-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .project-card {
-            background-color: rgba(26, 26, 46, 0.8);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            position: relative;
-            animation: fadeIn 0.6s ease, slideIn 0.6s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .project-image {
-            width: 100%;
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .project-card:hover .project-image img {
-            transform: scale(1.05);
-        }
-        
-        .project-content {
-            padding: 1.5rem;
-        }
-        
-        .project-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #ff6b6b;
-        }
-        
-        .project-content p {
-            color: #cccccc;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .project-tag {
-            background-color: rgba(151, 114, 251, 0.2);
-            color: #9772fb;
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-        }
-        
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .project-link {
-            color: #e6e6e6;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .project-link:hover {
-            color: #ff6b6b;
-        }
-        
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+/* Projects section */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(236, 234, 234, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #e3d8d8;
+}
+
+.project-content p {
+  color: #ebeae4e0;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.project-tags {
+  margin-top: 10px;
+}
+
+.project-link {
+  display: inline-block;
+  background-color: #e1306c; /* Instagram rang */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #c72c60;
+}
+
+    
+
+
+
+
+
+
+
+
+
         /* Contact section */
         .contact {
             padding: 6rem 1rem;
@@ -606,21 +589,17 @@
         <div class="about-container">
             <div class="about-text">
                 <h2 class="section-title">About Me</h2>
-                <p>Hello! I'm a creative developer with a passion for combining technology and art. My journey began with a love for anime and gradually evolved into creating digital experiences inspired by its unique visual language.</p>
-                <p>With expertise in front-end development and UI/UX design, I strive to build interfaces that are not only functional but also visually captivating, drawing inspiration from the vibrant world of anime.</p>
+                <p>Mening IT sohasiga bo‘lgan qiziqishim internetdan faol foydalanishim va ChatGPT tavsiyalari orqali boshlangan. Ayniqsa sun’iy intellekt (AI) sohasiga katta qiziqish bildiraman. Hozirda front-end va back-end yo‘nalishlarida tajriba to‘plab, har tomonlama rivojlanayotgan dasturchi bo‘lish yo‘lida harakat qilyapman</p>
                 <div class="skills">
                     <span class="skill-tag">HTML5</span>
                     <span class="skill-tag">CSS3</span>
                     <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">UI/UX Design</span>
-                    <span class="skill-tag">Digital Art</span>
-                    <span class="skill-tag">Animation</span>
+        
                 </div>
             </div>
             <div class="about-image">
-                <img src="" alt="About me image">
-
+                <img src="https://raw.githubusercontent.com/ronnie7799/windows/main/pf%20img.jpeg
+"alt="About me image">
             </div>
         </div>
     </section>
@@ -629,92 +608,22 @@
         <div class="anime-lines"></div>
         <div class="projects-container">
             <div class="projects-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p>A selection of my recent work combining web development and anime aesthetics</p>
+                <h2 class="section-title">Projects</h2>
+                <p>Men tayyorlagan va sizga qilib berishim mumkun bolgan dastur va web sahifalar</p>
             </div>
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/400/300" alt="Anime Shop Project">
-                    </div>
-                    <div class="project-content">
-                        <h3>Anime Shop</h3>
-                        <p>An e-commerce platform for anime merchandise with custom animations and interactive product displays.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Redux</span>
-                            <span class="project-tag">GSAP</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">View Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/400/300" alt="Anime Character Dashboard">
-                    </div>
-                    <div class="project-content">
-                        <h3>Anime Tracker</h3>
-                        <p>A dashboard for tracking anime series with ratings, watch history, and personalized recommendations.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Vue.js</span>
-                            <span class="project-tag">Firebase</span>
-                            <span class="project-tag">SVG Animation</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">View Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/400/300" alt="Interactive Storytelling App">
-                    </div>
-                    <div class="project-content">
-                        <h3>Anime Story World</h3>
-                        <p>An interactive storytelling application with anime-style character customization and branching narratives.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">Canvas API</span>
-                            <span class="project-tag">Web Audio</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">View Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/400/300" alt="Anime Social Platform">
-                    </div>
-                    <div class="project-content">
-                        <h3>Anime Connect</h3>
-                        <p>A social platform for anime enthusiasts featuring customizable profiles, discussion forums, and event scheduling.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">Express</span>
-                            <span class="project-tag">MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">View Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ </div>
+  <div class="project-content">
+    <h3>Instagram Reels content</h3>
+    <p>
+      Hozirda dasturlashni o‘rganish bosqichidaman. SNS marketing bilan shug‘ullanib kelaman.
+    </p>
+    <div class="project-tags">
+      <a href="https://www.instagram.com/shoxsulton.7/" class="project-link" target="_blank">Instagram</a>
+    </div>
+  </div>
+</div>
 
     <section class="contact" id="contact">
         <div class="contact-container">
